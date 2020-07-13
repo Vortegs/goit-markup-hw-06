@@ -518,7 +518,6 @@ footer .but-social-net {
 
   background-color: #2196F3;
   color: var(--button-text);
-  fill: #FFFFFF;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
@@ -534,6 +533,7 @@ footer .but-social-net {
   max-height: 24px;
   margin-left: 10px;
   margin-right: 28px;
+  fill: #ffffff;
 }
 
 
