@@ -697,14 +697,18 @@ footer .but-social-net {
 
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   background-color: rgba(0, 0, 0, 0.2);
+  
 
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
@@ -712,10 +716,12 @@ footer .but-social-net {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
 
   width: 528px;
   height: 581px;
   padding: 40px;
+
 
   background-color: var(--primary-background-color);
   border-radius: 4px;
@@ -851,7 +857,7 @@ textarea {
 .form-input:focus+.form-label,
 .form-input:not(:placeholder-shown)+.form-label {
   transform: translateY(-50%);
-  top: -16px;
+  top: -10px;
   left: 16px;
 
   color: var(--accent-color);
@@ -869,46 +875,54 @@ textarea {
 }
 
 .checkbox {
-  /* -webkit-appearance: none;
+  -webkit-appearance: none;
  -moz-appearance: none;
- appearance: none; */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+ appearance: none;
 
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  position: absolute;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 16px;
+      top: 11px;
+      border: none;
 }
 
-.checkbox-label {
-  display: flex;
-  align-items: center;
-}
+  .check-container {
+    position: relative;
+  }
 
-.checkbox-icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
+  .checkbox-label::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 16px;
+    top: 11px;
 
-  border: 2px solid #212121;
-  border-radius: 4px;
-}
+    border: solid 1px #212121;
+    border-radius: 2px;
+   }
 
-.checkbox:checked+.checkbox-icon {
-  border-color: var(--accent-color);
-  background-color: var(--accent-color);
-  background-image: url(../img/checkin.svg);
 
-  background-size: contain;
-  background-origin: border-box;
-}
+   .checkbox:checked ~.checkbox-label::after {
+     
+    background-origin: border-box;
+
+    background-image: url(../img/check.svg);
+    background-color: var(--accent-color);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: transparent ;
+   
+   }
+
+  .agree-string {
+    display: inline-block;
+    padding-left: 36px;
+  }
+
 
 .subscribe-form {
   display: flex;
