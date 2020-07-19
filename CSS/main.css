@@ -697,7 +697,7 @@ footer .but-social-net {
 
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: auto;
 
   background-color: rgba(0, 0, 0, 0.2);
